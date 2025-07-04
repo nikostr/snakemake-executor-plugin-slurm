@@ -303,7 +303,7 @@ class Executor(RemoteExecutor):
                 SubmittedJobInfo(job),
                 msg=(
                     f'SLURM sbatch failed. The error message was "{e.output}".\n'
-                    f"sbatch call:\n{call}\n"
+                    f"    sbatch call:\n        {call}\n"
                 )
             )
             return
