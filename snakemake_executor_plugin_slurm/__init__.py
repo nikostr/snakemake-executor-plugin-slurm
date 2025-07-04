@@ -302,7 +302,7 @@ class Executor(RemoteExecutor):
             self.report_job_error(
                 SubmittedJobInfo(job),
                 msg=(
-                    f'SLURM sbatch failed. The error message was "{e.output}".\n'
+                    f'SLURM sbatch failed. The error message was "{e.output.strip()}".\n'
                     f"    sbatch call:\n        {call}\n"
                 )
             )
